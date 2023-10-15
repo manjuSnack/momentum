@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum</title>
+  </head>
+  <body>
+    <!-- clock -->
+    <div class="clock-weather__box">
+      <h2 id="clock">00:00:00</h2>
+      <!-- weather -->
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- quotes -->
+    <div id="quote">
+      <span></span>
+      <br />
+      <span></span>
+    </div>
+    <!-- greeting -->
+    <div class="login__box">
+      <form id="login-form" class="hidden">
+        <input
+          class="input__text"
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+          autofocus
+        />
+        <!-- <button>Log In</button> 아래 submit과 같은 기능 -->
+        <input type="submit" value="Log In" />
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
+    </div>
+    <!-- todo -->
+    <div class="todo__box">
+      <form id="todo-form">
+        <input
+          class="input__text"
+          type="text"
+          placeholder="Write a To Do and Press Enter."
+          required
+        />
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <!-- background -->
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script
+      src="https://kit.fontawesome.com/493cc16663.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

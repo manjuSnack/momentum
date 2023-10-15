@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&family=Nunito+Sans:opsz@6..12&family=Nunito:wght@400;600&display=swap");
+@import "reset.css";
+
+:root {
+  --black: #3f3b3a;
+  --clouds: #fffbf2;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: Nunito, Noto Sans KR, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+}
+
+.hidden {
+  display: none;
+}
+
+/* clock */
+.clock-weather__box {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#clock {
+  font-size: 50px;
+}
+
+#weather {
+  font-size: 16px;
+}
+
+/* login-form */
+.login__box {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+#login-form input[type="submit"] {
+  display: none;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+input:focus-visible,
+input:focus {
+  outline: none;
+  border: none;
+}
+
+input::placeholder {
+  color: var(--black);
+  padding-left: 5px;
+}
+
+.input__text,
+#greeting {
+  font-size: 35px;
+}
+
+.input__text {
+  width: 120%;
+}
+
+/* todo-form */
+.todo__box {
+  width: auto;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#todo-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: inherit;
+  height: auto %;
+  box-sizing: border-box;
+}
+
+#todo-list li {
+  padding: 10px;
+  margin: 10px;
+  width: 500px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid var(--black);
+  background-color: var(--clouds);
+  border-radius: 15px;
+  opacity: 0.9;
+}
+
+/* quotes */
+#quote {
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  background-color: var(--clouds);
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* background */
+.calendar {
+  position: absolute;
+  z-index: -1;
+  animation: backgroundMoving 10s ease-in-out infinite;
+}
+
+@keyframes backgroundMoving {
+  0% {
+    transform: translateY(1);
+  }
+  50% {
+    transform: translateY(-2.5%) scale(1.1);
+  }
+  100% {
+    transform: translateY(1) scale(1);
+  }
+}
