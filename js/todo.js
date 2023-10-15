@@ -18,7 +18,7 @@ function deleteTodo(event) {
   toDos = toDos.filter((todo) => todo.id !== parseInt(li.id));
   saveToDos();
 
-  if (toDos.length <= 33 || savedToDos <= 33) {
+  if (toDos.length <= 27 || savedToDos <= 27) {
     toDoInput.classList.remove("hidden");
   }
 }
@@ -34,7 +34,7 @@ function paintToDo(newTodo) {
   // fontawesome -- <i class="fa-solid fa-circle-xmark"></i>;
   xmarkIcon.addEventListener("click", deleteTodo);
 
-  if (toDos.length >= 33 || savedToDos >= 33) {
+  if (toDos.length >= 27 || savedToDos >= 27) {
     console.log(toDos.length);
     toDoInput.classList.add("hidden");
   }
